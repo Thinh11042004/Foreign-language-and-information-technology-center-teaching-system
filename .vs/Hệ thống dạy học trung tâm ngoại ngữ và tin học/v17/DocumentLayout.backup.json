@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\finance.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:wwwroot\\css\\finance.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\course_management_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:wwwroot\\css\\course_management_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\views\\course_management\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:views\\course_management\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\views\\user_management\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:views\\user_management\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|d:\\h\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T07:25:40.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.css",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\Home.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\Home.css",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\Home.css",
+              "RelativeToolTip": "wwwroot\\css\\Home.css",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAAAPcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-06T06:58:39.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T06:24:27.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T06:24:27.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T06:20:52.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Finance.css",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\Finance.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\Finance.css",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\Finance.css",
+              "RelativeToolTip": "wwwroot\\css\\Finance.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-06T06:04:11.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FinanceController.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Controllers\\FinanceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FinanceController.cs",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Controllers\\FinanceController.cs",
+              "RelativeToolTip": "Controllers\\FinanceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T06:03:18.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T05:55:07.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T05:50:13.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\User_Management\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\User_Management\\Index.cshtml",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\User_Management\\Index.cshtml",
+              "RelativeToolTip": "Views\\User_Management\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T05:38:34.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\DashBoard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DashBoard\\Index.cshtml",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\DashBoard\\Index.cshtml",
+              "RelativeToolTip": "Views\\DashBoard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T05:37:08.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Course_Management_index.css",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\Course_Management_index.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\Course_Management_index.css",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\wwwroot\\css\\Course_Management_index.css",
+              "RelativeToolTip": "wwwroot\\css\\Course_Management_index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-06T05:35:39.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\Course_Management\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Course_Management\\Index.cshtml",
+              "ToolTip": "D:\\H\u1EC7 th\u1ED1ng d\u1EA1y h\u1ECDc trung t\u00E2m ngo\u1EA1i ng\u1EEF v\u00E0 tin h\u1ECDc\\Views\\Course_Management\\Index.cshtml",
+              "RelativeToolTip": "Views\\Course_Management\\Index.cshtml",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAAMkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T05:16:56.061Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

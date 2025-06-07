@@ -1,0 +1,247 @@
+﻿@{
+    ViewData["Title"] = "Trang Chủ - EduCenter";
+    Layout = "_layout";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Các thư viện CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="~/css/Home.css">
+    <link rel="stylesheet" href="~/css/Navbar.css">
+</head>
+<body>
+   <header class="header">
+        <partial name="_Navbar" />
+        </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">
+                Trung tâm Ngoại ngữ & Tin học EduCenter
+            </h1>
+            <p class="lead animate__animated animate__fadeInUp">
+                Nơi khởi đầu hành trình chinh phục kiến thức của bạn
+            </p>
+            <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <button class="btn btn-primary-custom me-3 hvr-grow">
+                    <i class="fas fa-user-plus"></i> Đăng ký ngay
+                </button>
+                <button class="btn btn-secondary-custom hvr-grow">
+                    <i class="fas fa-info-circle"></i> Tìm hiểu thêm
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-box animate__animated animate__fadeIn animate__delay-0.5s">
+                        <div class="stat-number">243+</div>
+                        <div class="stat-label">Học sinh</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box animate__animated animate__fadeIn animate__delay-1s">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Giáo viên</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box animate__animated animate__fadeIn animate__delay-2s">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Khóa học</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box animate__animated animate__fadeIn animate__delay-3s">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Hài lòng</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section-light">
+        <div class="container">
+            <h2 class="section-title">Các Khóa Học Nổi Bật</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="course-card hvr-float">
+                        <i class="fas fa-language"></i>
+                        <h4>Tiếng Anh Giao Tiếp</h4>
+                        <p>Phát triển kỹ năng giao tiếp tiếng Anh tự tin trong mọi tình huống</p>
+                        <button class="btn btn-primary-custom btn-sm">Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="course-card hvr-float">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Tin Học Văn Phòng</h4>
+                        <p>Thành thạo Word, Excel, PowerPoint cho công việc văn phòng</p>
+                        <button class="btn btn-primary-custom btn-sm">Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="course-card hvr-float">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Luyện Thi IELTS</h4>
+                        <p>Chuẩn bị kỹ lưỡng cho kỳ thi IELTS với đội ngũ giáo viên giàu kinh nghiệm</p>
+                        <button class="btn btn-primary-custom btn-sm">Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="section-white">
+        <div class="container">
+            <h2 class="section-title">Vì Sao Chọn EduCenter?</h2>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-0.5s">
+                        <i class="fas fa-users"></i>
+                        <h5>Lớp Học Nhỏ</h5>
+                        <p>Tối đa 15 học viên/lớp</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-1s">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h5>Giáo Viên Giỏi</h5>
+                        <p>100% có chứng chỉ chuyên môn</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-1.5s">
+                        <i class="fas fa-clock"></i>
+                        <h5>Lịch Học Linh Hoạt</h5>
+                        <p>Nhiều ca học phù hợp</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-2s">
+                        <i class="fas fa-medal"></i>
+                        <h5>Cam Kết Chất Lượng</h5>
+                        <p>Học lại miễn phí nếu chưa đạt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Sẵn Sàng Bắt Đầu Hành Trình Học Tập?</h2>
+            <p class="lead mb-4">Đăng ký ngay hôm nay để nhận ưu đãi 20% học phí khóa đầu tiên!</p>
+            <button class="btn btn-primary-custom btn-lg hvr-buzz">
+                <i class="fas fa-phone"></i> Liên hệ tư vấn: 0372 513 965
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-white">
+        <div class="container">
+            <h2 class="section-title">Thông Tin Liên Hệ</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-map-marker-alt fa-2x" style="color: var(--color-4);"></i>
+                        <h5 class="mt-3">Địa chỉ</h5>
+                        <p>123 Đường Võ Văn Ngân, Quận Thủ Đức<br>TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-phone fa-2x" style="color: var(--color-4);"></i>
+                        <h5 class="mt-3">Điện thoại</h5>
+                        <p>0123 456 789<br>0987 654 321</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-envelope fa-2x" style="color: var(--color-4);"></i>
+                        <h5 class="mt-3">Email</h5>
+                        <p>info@educenter.com<br>support@educenter.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Logo và Social -->
+                <div class="col-md-4">
+                    <div class="footer-logo mb-3">
+                        <i class="fas fa-graduation-cap"></i> <span>EduCenter</span>
+                        <p class="small mt-2">HỌC NGOẠI NGỮ VÀ TIN HỌC CHO MỌI LỨA TUỔI</p>
+                    </div>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <button class="btn btn-light btn-register">ĐĂNG KÝ NGAY</button>
+                </div>
+
+                <!-- Trợ giúp -->
+                <div class="col-md-4">
+                    <h5 class="footer-title">TRỢ GIÚP</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới thiệu về EduCenter</a></li>
+                        <li><a href="#">Khóa học</a></li>
+                        <li><a href="#">Chính sách học phí</a></li>
+                        <li><a href="#">Chính sách bảo lưu</a></li>
+                        <li><a href="#">Chính sách chuyển nhượng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Liên hệ -->
+                <div class="col-md-4">
+                    <h5 class="footer-title">LIÊN HỆ VỚI EDUCENTER</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> cskh@educenter.com</p>
+                        <p><i class="fas fa-phone"></i> Hotline CSKH: 0901 234 567</p>
+                        <p><i class="fas fa-phone"></i> Tư Vấn Khóa Học: 0965 177 753</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Đường Võ Văn Ngân, Quận Thủ Đức, TP.HCM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 456 Đường Nguyễn Văn Cừ, Quận 1, TP.HCM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 45 Đường Lê Thị Riêng, Quận 5, TP.HCM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 67 Đường Mai Thị Lựu, Quận Bình Thạnh, TP.HCM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Người dùng - EduCenter";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/User_Management_index.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1><i class="fas fa-users"></i> Quản lý Người dùng</h1>
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <i class="fas fa-user-shield"></i>
+                        <span>2 Admin</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>15 Giáo viên</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>243 Học sinh</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Cập nhật: 5 phút trước</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions-bar">
+            <div class="search-filter-group">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm theo tên, email hoặc ID..." id="searchInput">
+                </div>
+                <select class="filter-select" id="roleFilter">
+                    <option value="">Tất cả vai trò</option>
+                    <option value="admin">Admin</option>
+                    <option value="teacher">Giáo viên</option>
+                    <option value="student">Học sinh</option>
+                </select>
+                <select class="filter-select" id="statusFilter">
+                    <option value="">Tất cả trạng thái</option>
+                    <option value="active">Hoạt động</option>
+                    <option value="inactive">Tạm khóa</option>
+                </select>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+                <button class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    Xuất Excel
+                </button>
+                <button class="btn btn-primary" onclick="openAddUserModal()">
+                    <i class="fas fa-plus"></i>
+                    Thêm người dùng
+                </button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" id="selectAll" onchange="toggleSelectAll()">
+                        </th>
+                        <th>Người dùng</th>
+                        <th>Vai trò</th>
+                        <th>Trạng thái</th>
+                        <th>Ngày tham gia</th>
+                        <th>Lần đăng nhập cuối</th>
+                        <th style="text-align: center;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn" onclick="changePage(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="page-info">Hiển thị 1-10 của 260 người dùng</span>
+            <button class="page-btn" onclick="changePage(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="~/js/User_Management_index.js"></script>
+</body>
+</html>
