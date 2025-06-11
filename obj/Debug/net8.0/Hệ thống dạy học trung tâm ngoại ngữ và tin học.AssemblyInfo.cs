@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hệ thống dạy học trung tâm ngoại ngữ và tin học")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44689056d999fb768dc908164e88818a9dc19375")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hệ thống dạy học trung tâm ngoại ngữ và tin học")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hệ thống dạy học trung tâm ngoại ngữ và tin học")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

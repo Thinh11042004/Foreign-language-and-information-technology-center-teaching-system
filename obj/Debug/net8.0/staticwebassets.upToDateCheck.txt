@@ -2,7 +2,7 @@ wwwroot\css\Course_Management_index.css
 wwwroot\css\DashBoard.css
 wwwroot\css\Finance.css
 wwwroot\css\Home.css
-wwwroot\css\Navbar.css
+wwwroot\css\Profile.css
 wwwroot\css\User_Management_index.css
 wwwroot\favicon.ico
 wwwroot\js\Course_Management_index.js
@@ -65,3 +65,10 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\Register.css
+wwwroot\css\Navbar.css
+wwwroot\css\Login.css
+wwwroot\css\Teacher\Index.css
+wwwroot\js\stie.js
+wwwroot\css\site.css
+wwwroot\css\AuthLayout.css

@@ -1,0 +1,241 @@
+﻿@using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Dashboard
+@model StudentDashboardViewModel
+@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<div class="container-fluid py-4" id="student-dashboard">
+    <!-- Welcome Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="welcome-card bg-gradient-primary text-white rounded-4 p-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-2">Welcome back, @Model.Student.User.FullName! 👋</h2>
+                        <p class="mb-0 opacity-75">Ready to continue your learning journey? Let's see what's on your agenda today.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="student-avatar">
+                            <img src="@(Model.Student.User.Avatar ?? "/images/default-avatar.png")" 
+                                 class="rounded-circle border border-white border-3" 
+                                 width="80" height="80" alt="Student Avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quick Stats -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-3 col-md-6">
+            <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-book-open fa-lg text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-1 counter" data-target="@Model.ActiveEnrollments.Count">0</h3>
+                            <p class="text-muted mb-0 small">Active Courses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon bg-warning bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-tasks fa-lg text-warning"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-1 counter" data-target="@Model.PendingAssignments.Count">0</h3>
+                            <p class="text-muted mb-0 small">Pending Tasks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon bg-success bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-check-circle fa-lg text-success"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-1">
+                                <span class="counter" data-target="@Model.RecentGrades.Where(g => g.Percentage >= 80).Count()">0</span>
+                                <small class="text-muted">/@Model.RecentGrades.Count</small>
+                            </h3>
+                            <p class="text-muted mb-0 small">Good Grades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon bg-info bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-calendar-check fa-lg text-info"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-1">
+                                <span class="counter" data-target="90">0</span><small>%</small>
+                            </h3>
+                            <p class="text-muted mb-0 small">Attendance Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content Row -->
+    <div class="row g-4">
+        <!-- Left Column -->
+        <div class="col-lg-8">
+            <!-- Today's Schedule -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-transparent border-0 p-4 pb-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-calendar-day text-primary me-2"></i>
+                            Today's Schedule
+                        </h5>
+                        <small class="text-muted">@DateTime.Now.ToString("MMMM dd, yyyy")</small>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div id="today-schedule">
+                        @if (Model.TodayClasses.Any())
+                        {
+                            @foreach (var classItem in Model.TodayClasses)
+                            {
+                                <div class="schedule-item d-flex justify-content-between align-items-center mb-3 p-3 border rounded">
+                                    <div>
+                                        <h6 class="mb-1 fw-bold">@classItem.Name</h6>
+                                        <p class="mb-0 text-muted">
+                                            <i class="fas fa-book me-1"></i> @classItem.Course.Name |
+                                            <i class="fas fa-clock me-1"></i> @classItem.Schedule
+                                        </p>
+                                    </div>
+                                    <span class="badge bg-primary">Today</span>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div class="text-muted">You have no classes scheduled for today.</div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Grades -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-transparent border-0 p-4 pb-0">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-clipboard-check text-success me-2"></i>
+                        Recent Grades
+                    </h5>
+                </div>
+                <div class="card-body p-4">
+                    @if (Model.RecentGrades.Any())
+                    {
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Assignment</th>
+                                    <th>Course</th>
+                                    <th>Grade (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var grade in Model.RecentGrades)
+                                {
+                                    <tr>
+                                        <td>@grade.Assignment.Title</td>
+                                        <td>@grade.Enrollment.Course.Name</td>
+                                        <td class="fw-bold">@grade.Percentage.ToString("F1")%</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <div class="text-muted">No grades available.</div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-4">
+            <!-- Assignments Panel -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-transparent border-0 p-4 pb-0">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-tasks text-warning me-2"></i>
+                        Pending Assignments
+                    </h5>
+                </div>
+                <div class="card-body p-4">
+                    @if (Model.PendingAssignments.Any())
+                    {
+                        <ul class="list-group">
+                            @foreach (var assignment in Model.PendingAssignments)
+                            {
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span>
+                                        <i class="fas fa-file-alt text-muted me-2"></i>
+                                        @assignment.Assignment.Title
+                                    </span>
+                                    <span class="badge bg-warning text-dark">@assignment.Assignment.DueDate.ToString("MM/dd")</span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-muted">No pending assignments.</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Counter Animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.dataset.target;
+                let count = 0;
+                const step = target / 50;
+
+                const updateCount = () => {
+                    count += step;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        });
+    </script>
+}
+

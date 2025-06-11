@@ -1,4 +1,7 @@
-﻿:root {
+﻿
+/*File Home.css*/
+
+:root {
     --color-1: #F4EEFF; /* Màu tím nhạt nhất */
     --color-2: #DCD6F7; /* Màu tím nhạt */
     --color-3: #A6B1E1; /* Màu xanh tím */
@@ -17,7 +20,6 @@ body {
     /* Thiết lập font chữ cho body */
     background-color: #ffffff;
     /* Màu nền trắng cho body */
-    margin-top: 110px;
 }
 
 .header{
@@ -30,7 +32,7 @@ body {
     /* Màu nền gradient cho hero-section */
     color: white;
     /* Màu chữ trắng */
-    padding: 80px 0;
+    padding: 130px 0 80px;
     /* Padding trên và dưới cho hero-section */
     text-align: center;
     /* Căn giữa nội dung */
@@ -168,6 +170,16 @@ body {
     font-weight: bold;
     /* Đặt chữ đậm cho tiêu đề */
 }
+.animate__delay-0_5s {
+    animation-delay: 0.5s 
+}
+
+.animate__delay-1_5s {
+    animation-delay: 1.5s 
+}
+
+
+
 
 /* Features */
 .feature-box {

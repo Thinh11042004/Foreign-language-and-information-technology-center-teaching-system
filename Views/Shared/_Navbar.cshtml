@@ -1,52 +1,54 @@
-﻿<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
+﻿@using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
+@using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
-    <!-- Các liên kết CSS cần thiết -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="~/css/Navbar.css">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="">
-                <i class="fas fa-graduation-cap"></i> EduCenter
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="navbar">
-                <ul class="navbar-nav ">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-graduation-cap"></i> EduCenter
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#courses"><i class="fa-solid fa-book-open"></i>Khóa học</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa-solid fa-phone"></i>Liên hệ</a></li>
+                @if (SignInManager.IsSignedIn(User))
+                {
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Trang chủ</a>
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index">
+                            <i class="fas fa-user-circle"></i> Hồ sơ 
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#courses">Khóa học</a>
+                        <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home")" class="d-inline">
+                            <button type="submit" class="nav-link btn btn-link text-white border-0">
+                                <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                            </button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">
+                            <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Giới thiệu</a>
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">
+                            <i class="fas fa-registered"></i> Đăng ký
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Liên hệ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#login">Đăng nhập</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#register">Đăng ký</a>
-                    </li>
-                </ul>
-            </nav>
+                }
+
+            </ul>
         </div>
-    </nav>
-</head>
-<body>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    </div>
+</nav>

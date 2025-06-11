@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y/otYiJoxiU=",
+  "dgSpecHash": "UGBpwgH41gM=",
   "success": true,
-  "projectFilePath": "D:\\Hệ thống dạy học trung tâm ngoại ngữ và tin học\\Hệ thống dạy học trung tâm ngoại ngữ và tin học.csproj",
+  "projectFilePath": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Foreign-language-and-information-technologya-center-teaching-system.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

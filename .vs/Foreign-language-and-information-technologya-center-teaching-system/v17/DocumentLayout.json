@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Foreign-language-and-information-technology-center-teaching-system\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\models\\identity\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:models\\identity\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationRole.cs",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Identity\\ApplicationRole.cs",
+              "RelativeDocumentMoniker": "Models\\Identity\\ApplicationRole.cs",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Identity\\ApplicationRole.cs",
+              "RelativeToolTip": "Models\\Identity\\ApplicationRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:19:07.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAqwKcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T09:15:16.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAuwKwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T09:11:23.324Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

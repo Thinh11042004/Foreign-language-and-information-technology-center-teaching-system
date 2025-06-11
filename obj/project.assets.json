@@ -8331,11 +8331,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hệ thống dạy học trung tâm ngoại ngữ và tin học\\Hệ thống dạy học trung tâm ngoại ngữ và tin học.csproj",
-      "projectName": "Hệ thống dạy học trung tâm ngoại ngữ và tin học",
-      "projectPath": "D:\\Hệ thống dạy học trung tâm ngoại ngữ và tin học\\Hệ thống dạy học trung tâm ngoại ngữ và tin học.csproj",
+      "projectUniqueName": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Foreign-language-and-information-technologya-center-teaching-system.csproj",
+      "projectName": "Foreign-language-and-information-technologya-center-teaching-system",
+      "projectPath": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Foreign-language-and-information-technologya-center-teaching-system.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Hệ thống dạy học trung tâm ngoại ngữ và tin học\\obj\\",
+      "outputPath": "D:\\Foreign-language-and-information-technology-center-teaching-system\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

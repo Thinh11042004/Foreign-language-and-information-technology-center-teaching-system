@@ -1,4 +1,7 @@
-﻿:root {
+﻿
+/*File Navbar.css*/
+
+:root {
     --color-1: #F4EEFF; /* Màu tím nhạt nhất */
     --color-2: #DCD6F7; /* Màu tím nhạt */
     --color-3: #A6B1E1; /* Màu xanh tím */
@@ -19,15 +22,13 @@ body {
 
 .navbar {
     background-color: var(--color-4); /* Màu nền navbar sử dụng biến --color-4 */
-    justify-content: center; /* Căn giữa các item */
-    align-items: center; /* Căn giữa các item theo chiều dọc */
     padding: 1rem 0; /* Padding cho navbar, tạo không gian ở trên và dưới */
     width: 100%; /* Đảm bảo navbar chiếm 100% chiều rộng của trang */
 }
 
 /* Logo/Brand */
 .navbar-brand {
-    font-size: 2rem; /* Tăng kích thước chữ cho logo */
+    font-size: 1.3rem; /* Tăng kích thước chữ cho logo */
     font-weight: 500; /* Độ đậm của font cho logo */
     display: flex; /* Dùng flex để căn chỉnh các phần tử bên trong logo */
     align-items: center; /* Căn giữa theo chiều dọc */
@@ -36,23 +37,23 @@ body {
 /* Menu navigation */
 .navbar-nav {
     display: flex; /* Sử dụng Flexbox để sắp xếp các item trong navbar */
-    justify-content: center;
-    align-items: center; /* Căn giữa các item theo chiều dọc */
-    font-size: 1.5rem; /* Kích thước font cho các item trong menu */
+    font-size: 1rem; /* Kích thước font cho các item trong menu */
     transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà khi hover */
+    margin-left: 100px;
 }
+    .navbar-nav i {
+        padding-right: 0.3rem;
+    }   
 
     .navbar-nav .nav-item {
         margin-left: 1.5rem; /* Tạo khoảng cách giữa các item trong menu */
     }
 
-        .navbar-nav .nav-item:first-child {
-            margin-left: 0; /* Loại bỏ margin cho item đầu tiên */
-        }
 
     .navbar-nav:hover {
         color: var(--color-2); /* Thay đổi màu chữ khi hover */
     }
+
 
 
 

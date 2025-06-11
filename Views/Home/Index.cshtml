@@ -1,247 +1,429 @@
-﻿@{
-    ViewData["Title"] = "Trang Chủ - EduCenter";
-    Layout = "_layout";
+﻿@using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums
+@using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Home
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Home";
 }
 
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-
-    <!-- Các thư viện CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
-    <link rel="stylesheet" href="~/css/Home.css">
-    <link rel="stylesheet" href="~/css/Navbar.css">
-</head>
-<body>
-   <header class="header">
-        <partial name="_Navbar" />
-        </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">
-                Trung tâm Ngoại ngữ & Tin học EduCenter
-            </h1>
-            <p class="lead animate__animated animate__fadeInUp">
-                Nơi khởi đầu hành trình chinh phục kiến thức của bạn
-            </p>
-            <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
-                <button class="btn btn-primary-custom me-3 hvr-grow">
-                    <i class="fas fa-user-plus"></i> Đăng ký ngay
-                </button>
-                <button class="btn btn-secondary-custom hvr-grow">
-                    <i class="fas fa-info-circle"></i> Tìm hiểu thêm
-                </button>
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-6">
+                <div class="hero-content animate__animated animate__fadeInLeft">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Master <span class="text-warning">Languages</span> &
+                        <span class="text-info">Technology</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Join thousands of learners who have transformed their careers through our comprehensive
+                        language and IT courses. Expert instructors, flexible schedules, industry-recognized certificates.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#featured-courses" class="btn btn-light btn-lg me-3 mb-2">
+                            <i class="fas fa-rocket me-2"></i>Explore Courses
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-lg mb-2" data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <i class="fas fa-play me-2"></i>Watch Demo
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="section-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <div class="stat-box animate__animated animate__fadeIn animate__delay-0.5s">
-                        <div class="stat-number">243+</div>
-                        <div class="stat-label">Học sinh</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-box animate__animated animate__fadeIn animate__delay-1s">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Giáo viên</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-box animate__animated animate__fadeIn animate__delay-2s">
-                        <div class="stat-number">12+</div>
-                        <div class="stat-label">Khóa học</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-box animate__animated animate__fadeIn animate__delay-3s">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">Hài lòng</div>
+            <div class="col-lg-6">
+                <div class="hero-stats animate__animated animate__fadeInRight">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 backdrop-blur rounded-4 p-4 text-center">
+                                <div class="stat-icon mb-2">
+                                    <i class="fas fa-users fa-2x text-warning"></i>
+                                </div>
+                                <h3 class="fw-bold mb-1 counter" data-target="@Model.Statistics.TotalStudents">0</h3>
+                                <small class="text-light">Happy Students</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 backdrop-blur rounded-4 p-4 text-center">
+                                <div class="stat-icon mb-2">
+                                    <i class="fas fa-chalkboard-teacher fa-2x text-success"></i>
+                                </div>
+                                <h3 class="fw-bold mb-1 counter" data-target="@Model.Statistics.TotalTeachers">0</h3>
+                                <small class="text-light">Expert Teachers</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 backdrop-blur rounded-4 p-4 text-center">
+                                <div class="stat-icon mb-2">
+                                    <i class="fas fa-book fa-2x text-info"></i>
+                                </div>
+                                <h3 class="fw-bold mb-1 counter" data-target="@Model.Statistics.TotalCourses">0</h3>
+                                <small class="text-light">Available Courses</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 backdrop-blur rounded-4 p-4 text-center">
+                                <div class="stat-icon mb-2">
+                                    <i class="fas fa-trophy fa-2x text-warning"></i>
+                                </div>
+                                <h3 class="fw-bold mb-1 counter" data-target="@Model.Statistics.ActiveClasses">0</h3>
+                                <small class="text-light">Active Classes</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Courses Section -->
-    <section id="courses" class="section-light">
-        <div class="container">
-            <h2 class="section-title">Các Khóa Học Nổi Bật</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="course-card hvr-float">
-                        <i class="fas fa-language"></i>
-                        <h4>Tiếng Anh Giao Tiếp</h4>
-                        <p>Phát triển kỹ năng giao tiếp tiếng Anh tự tin trong mọi tình huống</p>
-                        <button class="btn btn-primary-custom btn-sm">Xem chi tiết</button>
+    <!-- Animated Background -->
+    <div class="hero-bg-animation">
+        <div class="floating-icon" style="top: 10%; left: 10%;">
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="floating-icon" style="top: 20%; right: 15%;">
+            <i class="fas fa-language"></i>
+        </div>
+        <div class="floating-icon" style="bottom: 30%; left: 5%;">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+        <div class="floating-icon" style="bottom: 10%; right: 10%;">
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Courses Section -->
+<section id="featured-courses" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Featured Courses</h2>
+            <p class="lead text-muted">Discover our most popular and highly-rated courses</p>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var course in Model.FeaturedCourses)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card card h-100 shadow-hover border-0 overflow-hidden">
+                        <div class="course-image position-relative">
+                            <img src="@(GetCourseImage(course.Type, course.Category))" class="card-img-top" alt="@course.Name" style="height: 200px; object-fit: cover;">
+                            <div class="course-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0">
+                                <a href="#" class="btn btn-light rounded-pill">
+                                    <i class="fas fa-arrow-right me-2"></i>Learn More
+                                </a>
+                            </div>
+                            <div class="course-badge position-absolute top-0 end-0 m-3">
+                                @if (course.Type == CourseType.Language)
+                                {
+                                    <span class="badge bg-primary rounded-pill">
+                                        <i class="fas fa-language me-1"></i>Language
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success rounded-pill">
+                                        <i class="fas fa-laptop-code me-1"></i>IT
+                                    </span>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4">
+                            <div class="course-meta mb-2">
+                                <span class="badge bg-light text-dark me-2">@course.Level</span>
+                                <span class="text-muted small">
+                                    <i class="fas fa-clock me-1"></i>@course.DurationHours hours
+                                </span>
+                            </div>
+
+                            <h5 class="card-title fw-bold mb-3">@course.Name</h5>
+                            <p class="card-text text-muted mb-3">
+                                @(course.Description.Length > 100 ? course.Description.Substring(0, 100) + "..." : course.Description)
+                            </p>
+
+                            <div class="course-details mb-3">
+                                <div class="row g-2 text-center">
+                                    <div class="col">
+                                        <div class="detail-item">
+                                            <i class="fas fa-users text-primary"></i>
+                                            <small class="d-block text-muted">Max @course.MaxStudents</small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="detail-item">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <small class="d-block text-muted">4.8 Rating</small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="detail-item">
+                                            <i class="fas fa-certificate text-success"></i>
+                                            <small class="d-block text-muted">Certificate</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 p-4 pt-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="h4 fw-bold text-primary mb-0">${@course.Fee:N0}</span>
+                                    <small class="text-muted">/course</small>
+                                </div>
+                                <div class="course-actions">
+                                    <button class="btn btn-outline-primary btn-sm me-2" title="Add to Wishlist">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <a href="#" class="btn btn-primary">
+                                        Enroll Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="course-card hvr-float">
-                        <i class="fas fa-laptop-code"></i>
-                        <h4>Tin Học Văn Phòng</h4>
-                        <p>Thành thạo Word, Excel, PowerPoint cho công việc văn phòng</p>
-                        <button class="btn btn-primary-custom btn-sm">Xem chi tiết</button>
+            }
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="@Url.Action("Index", "Courses")" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-th-large me-2"></i>View All Courses
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Why Choose Us?</h2>
+            <p class="lead text-muted">Experience the difference with our comprehensive learning approach</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item text-center p-4 h-100">
+                    <div class="feature-icon mb-4">
+                        <div class="icon-circle bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-chalkboard-teacher fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold mb-3">Expert Instructors</h5>
+                    <p class="text-muted">Learn from industry professionals with years of real-world experience and proven teaching methodologies.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item text-center p-4 h-100">
+                    <div class="feature-icon mb-4">
+                        <div class="icon-circle bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-laptop fa-2x text-success"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold mb-3">Modern Facilities</h5>
+                    <p class="text-muted">State-of-the-art classrooms, computer labs, and language learning facilities equipped with the latest technology.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item text-center p-4 h-100">
+                    <div class="feature-icon mb-4">
+                        <div class="icon-circle bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-certificate fa-2x text-warning"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold mb-3">Certified Programs</h5>
+                    <p class="text-muted">Industry-recognized certificates and credentials that boost your career prospects and validate your skills.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item text-center p-4 h-100">
+                    <div class="feature-icon mb-4">
+                        <div class="icon-circle bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-clock fa-2x text-info"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold mb-3">Flexible Schedule</h5>
+                    <p class="text-muted">Choose from morning, afternoon, evening, and weekend classes to fit your busy lifestyle and commitments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Stories Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Success Stories</h2>
+            <p class="lead text-muted">Hear from our graduates who have achieved their goals</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="testimonial-card card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="testimonial-content mb-4">
+                            <div class="stars mb-3">
+                                @for (int i = 0; i < 5; i++)
+                                {
+                                    <i class="fas fa-star text-warning"></i>
+                                }
+                            </div>
+                            <p class="mb-0">"The English course here completely transformed my communication skills. I got promoted to an international role within 6 months of completion!"</p>
+                        </div>
+                        <div class="testimonial-author d-flex align-items-center">
+                            <img src="~/images/testimonials/student1.jpg" class="rounded-circle me-3" width="50" height="50" alt="Sarah Johnson">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Sarah Johnson</h6>
+                                <small class="text-muted">Business English Graduate</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="course-card hvr-float">
-                        <i class="fas fa-certificate"></i>
-                        <h4>Luyện Thi IELTS</h4>
-                        <p>Chuẩn bị kỹ lưỡng cho kỳ thi IELTS với đội ngũ giáo viên giàu kinh nghiệm</p>
-                        <button class="btn btn-primary-custom btn-sm">Xem chi tiết</button>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="testimonial-card card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="testimonial-content mb-4">
+                            <div class="stars mb-3">
+                                @for (int i = 0; i < 5; i++)
+                                {
+                                    <i class="fas fa-star text-warning"></i>
+                                }
+                            </div>
+                            <p class="mb-0">"The Web Development program gave me practical skills I use every day. Now I'm working as a full-stack developer at a tech startup!"</p>
+                        </div>
+                        <div class="testimonial-author d-flex align-items-center">
+                            <img src="~/images/testimonials/student2.jpg" class="rounded-circle me-3" width="50" height="50" alt="Michael Chen">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Michael Chen</h6>
+                                <small class="text-muted">Web Development Graduate</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="testimonial-card card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="testimonial-content mb-4">
+                            <div class="stars mb-3">
+                                @for (int i = 0; i < 5; i++)
+                                {
+                                    <i class="fas fa-star text-warning"></i>
+                                }
+                            </div>
+                            <p class="mb-0">"Learning Japanese here opened doors to amazing opportunities in international business. The teachers are incredibly supportive!"</p>
+                        </div>
+                        <div class="testimonial-author d-flex align-items-center">
+                            <img src="~/images/testimonials/student3.jpg" class="rounded-circle me-3" width="50" height="50" alt="Emily Rodriguez">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Emily Rodriguez</h6>
+                                <small class="text-muted">Japanese Language Graduate</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Features Section -->
-    <section id="about" class="section-white">
-        <div class="container">
-            <h2 class="section-title">Vì Sao Chọn EduCenter?</h2>
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-0.5s">
-                        <i class="fas fa-users"></i>
-                        <h5>Lớp Học Nhỏ</h5>
-                        <p>Tối đa 15 học viên/lớp</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-1s">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <h5>Giáo Viên Giỏi</h5>
-                        <p>100% có chứng chỉ chuyên môn</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-1.5s">
-                        <i class="fas fa-clock"></i>
-                        <h5>Lịch Học Linh Hoạt</h5>
-                        <p>Nhiều ca học phù hợp</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="feature-box animate__animated animate__fadeInUp animate__delay-2s">
-                        <i class="fas fa-medal"></i>
-                        <h5>Cam Kết Chất Lượng</h5>
-                        <p>Học lại miễn phí nếu chưa đạt</p>
-                    </div>
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h3 class="fw-bold mb-2">Ready to Start Your Learning Journey?</h3>
+                <p class="mb-0">Join thousands of successful graduates and take the first step towards your goals.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="@Url.Action("Register", "Account")" class="btn btn-light btn-lg">
+                    <i class="fas fa-rocket me-2"></i>Get Started Today
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Center Overview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Center Overview" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- CTA Section -->
-    <section class="section-light">
-        <div class="container text-center">
-            <h2 class="mb-4">Sẵn Sàng Bắt Đầu Hành Trình Học Tập?</h2>
-            <p class="lead mb-4">Đăng ký ngay hôm nay để nhận ưu đãi 20% học phí khóa đầu tiên!</p>
-            <button class="btn btn-primary-custom btn-lg hvr-buzz">
-                <i class="fas fa-phone"></i> Liên hệ tư vấn: 0372 513 965
-            </button>
-        </div>
-    </section>
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Animate counters
+            $('.counter').each(function() {
+                var $this = $(this);
+                var target = parseInt($this.data('target'));
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-white">
-        <div class="container">
-            <h2 class="section-title">Thông Tin Liên Hệ</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-map-marker-alt fa-2x" style="color: var(--color-4);"></i>
-                        <h5 class="mt-3">Địa chỉ</h5>
-                        <p>123 Đường Võ Văn Ngân, Quận Thủ Đức<br>TP. Hồ Chí Minh</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-phone fa-2x" style="color: var(--color-4);"></i>
-                        <h5 class="mt-3">Điện thoại</h5>
-                        <p>0123 456 789<br>0987 654 321</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-envelope fa-2x" style="color: var(--color-4);"></i>
-                        <h5 class="mt-3">Email</h5>
-                        <p>info@educenter.com<br>support@educenter.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                $({ value: 0 }).animate({ value: target }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.ceil(this.value));
+                    },
+                    complete: function() {
+                        $this.text(target);
+                    }
+                });
+            });
 
+            // Smooth scrolling for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
 
+            // Course card hover effects
+            $('.course-card').hover(
+                function() {
+                    $(this).find('.course-overlay').addClass('opacity-100');
+                    $(this).addClass('shadow-lg').removeClass('shadow-hover');
+                },
+                function() {
+                    $(this).find('.course-overlay').removeClass('opacity-100');
+                    $(this).addClass('shadow-hover').removeClass('shadow-lg');
+                }
+            );
+        });
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <!-- Logo và Social -->
-                <div class="col-md-4">
-                    <div class="footer-logo mb-3">
-                        <i class="fas fa-graduation-cap"></i> <span>EduCenter</span>
-                        <p class="small mt-2">HỌC NGOẠI NGỮ VÀ TIN HỌC CHO MỌI LỨA TUỔI</p>
-                    </div>
-                    <div class="social-icons mb-3">
-                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <button class="btn btn-light btn-register">ĐĂNG KÝ NGAY</button>
-                </div>
+      
+    </script>
 
-                <!-- Trợ giúp -->
-                <div class="col-md-4">
-                    <h5 class="footer-title">TRỢ GIÚP</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Giới thiệu về EduCenter</a></li>
-                        <li><a href="#">Khóa học</a></li>
-                        <li><a href="#">Chính sách học phí</a></li>
-                        <li><a href="#">Chính sách bảo lưu</a></li>
-                        <li><a href="#">Chính sách chuyển nhượng</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
+@functions {
+    public string GetCourseImage(CourseType type, string category)
+    {
+        if (string.IsNullOrEmpty(category)) category = "general";
 
-                <!-- Liên hệ -->
-                <div class="col-md-4">
-                    <h5 class="footer-title">LIÊN HỆ VỚI EDUCENTER</h5>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> cskh@educenter.com</p>
-                        <p><i class="fas fa-phone"></i> Hotline CSKH: 0901 234 567</p>
-                        <p><i class="fas fa-phone"></i> Tư Vấn Khóa Học: 0965 177 753</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Đường Võ Văn Ngân, Quận Thủ Đức, TP.HCM</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 456 Đường Nguyễn Văn Cừ, Quận 1, TP.HCM</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 45 Đường Lê Thị Riêng, Quận 5, TP.HCM</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 67 Đường Mai Thị Lựu, Quận Bình Thạnh, TP.HCM</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        return type == CourseType.Language
+            ? $"~/images/courses/language-{category.ToLower()}.jpg"
+            : $"~/images/courses/it-{category.ToLower()}.jpg";
+    }
+}
 
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-    
-</body>
-</html>
+}
