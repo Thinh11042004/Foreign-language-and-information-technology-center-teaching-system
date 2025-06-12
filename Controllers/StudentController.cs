@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Courses;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Courses;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Learning;
@@ -40,7 +40,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             var model = new StudentDashboardViewModel
             {
                 Student = student,
-                ActiveEnrollments = student.Enrollments.Where(e => e.Status == EnrollmentStatus.Active).ToList(),
+                ActiveEnrollments = student.Enrollments.Where(e => e.Status == EnrollmentStatus.Studying).ToList(),
                 TodayClasses = await GetStudentTodayClassesAsync(student.id),
                 PendingAssignments = await GetStudentPendingAssignmentsAsync(student.id),
                 RecentGrades = await GetStudentRecentGradesAsync(student.id),
@@ -180,7 +180,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             var dayOfWeek = today.DayOfWeek;
 
             return await _context.Enrollments
-                .Where(e => e.StudentId == studentId && e.Status == EnrollmentStatus.Active)
+                .Where(e => e.StudentId == studentId && e.Status == EnrollmentStatus.Studying)
                 .Select(e => e.Class)
                 .Where(c => c.Status == ClassStatus.Active && c.Schedule.Contains(dayOfWeek.ToString()))
                 .ToListAsync();

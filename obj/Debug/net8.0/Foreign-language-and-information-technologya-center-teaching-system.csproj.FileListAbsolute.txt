@@ -9,7 +9,11 @@ D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Foreign-language-and-information-technologya-center-teaching-system.pdb
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Azure.Core.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Azure.Identity.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\EPPlus.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\EPPlus.Interfaces.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Humanizer.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\itextsharp.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -39,6 +43,8 @@ D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
@@ -56,6 +62,7 @@ D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
@@ -93,7 +100,9 @@ D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Memory.Data.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\af\Humanizer.resources.dll
@@ -264,6 +273,7 @@ D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\Foreign-language-and-information-technologya-center-teaching-system.csproj.AssemblyReference.cache
@@ -276,7 +286,6 @@ D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\
 D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\Foreign-language-and-information-technologya-center-teaching-system.RazorAssemblyInfo.cache
 D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\Foreign-language-and-information-technologya-center-teaching-system.RazorAssemblyInfo.cs
 D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\Foreign-language-and-information-technologya-center-teaching-system.sourcelink.json
-D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\scopedcss\Areas\Identity\Pages\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\scopedcss\bundle\Foreign-language-and-information-technologya-center-teaching-system.styles.css
 D:\Foreign-language-and-information-technology-center-teaching-system\obj\Debug\net8.0\scopedcss\projectbundle\Foreign-language-and-information-technologya-center-teaching-system.bundle.scp.css

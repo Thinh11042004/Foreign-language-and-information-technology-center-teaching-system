@@ -1,7 +1,8 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Users;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.User;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.UserViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -21,10 +22,41 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             _roleManager = roleManager;
         }
 
-        // Users List
+        [HttpGet]
+        public async Task<IActionResult> Index(string searchString, int page = 1, int pageSize = 10)
+        {
+            var users = _context.Users
+                .Include(u => u.UserRoles)
+                .ThenInclude(ur => ur.Role)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                users = users.Where(u => u.UserName.Contains(searchString) || u.Email.Contains(searchString));
+            }
+
+            var count = await users.CountAsync();
+            var items = await users
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var model = new UserListViewModel
+            {
+                Users = items,
+                SearchString = searchString,
+                CurrentPage = page,
+                TotalPages = (int)Math.Ceiling(count / (double)pageSize),
+                Roles = await _roleManager.Roles.ToListAsync()  
+            };
+
+            return View(model);
+        }
+
+
         public async Task<IActionResult> Users(int page = 1, string search = "", string role = "")
         {
-            var query = _context.Users.AsQueryable();
+            var query = _context.Users.Include(u => u.UserRoles).ThenInclude(r => r.Role).AsQueryable();
 
             if (!string.IsNullOrEmpty(search))
             {
@@ -57,7 +89,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             return View(model);
         }
 
-        // Create User
         [HttpGet]
         public async Task<IActionResult> CreateUser()
         {
@@ -81,7 +112,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
                     FullName = model.FullName,
                     PhoneNumber = model.PhoneNumber,
                     CreatedAt = DateTime.UtcNow,
-                    IsActive = true
+                    
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
@@ -93,7 +124,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
                         await _userManager.AddToRoleAsync(user, model.Role);
                     }
 
-                    // Create specific profile based on role
                     if (model.Role == "Teacher")
                     {
                         var teacher = new Teachers
@@ -112,7 +142,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
                             UserId = user.Id,
                             StudentCode = GenerateStudentCode(),
                             EnrollmentDate = DateTime.UtcNow,
-                            Status = StudentStatus.Active
+                            Status = UserStatus.Active
                         };
                         _context.Students.Add(student);
                     }
@@ -132,14 +162,68 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             model.Roles = await _roleManager.Roles.ToListAsync();
             return View(model);
         }
+        [HttpPost]
+        public async Task<IActionResult> AssignRole(string userId, string role)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null || string.IsNullOrEmpty(role))
+                return NotFound();
+
+            var currentRoles = await _userManager.GetRolesAsync(user);
+
+            if (currentRoles.Any())
+            {
+                TempData["Error"] = "Người dùng đã có vai trò, không thể thay đổi.";
+                return RedirectToAction("Index");
+            }
+
+            if (role == "SuperAdmin")
+            {
+                TempData["Error"] = "Không thể gán vai trò SuperAdmin.";
+                return RedirectToAction("Index");
+            }
+
+            var result = await _userManager.AddToRoleAsync(user, role);
+            if (result.Succeeded)
+            {
+                await _context.SaveChangesAsync(); 
+                TempData["Success"] = "Vai trò đã được gán thành công.";
+            }
+            else
+            {
+                TempData["Error"] = "Gán vai trò thất bại.";
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateStatus([FromBody] StatusUpdateRequest request)
+        {
+            var user = await _userManager.FindByIdAsync(request.UserId);
+            if (user == null) return NotFound();
+
+            if (Enum.TryParse<UserStatus>(request.NewStatus, out var status))
+            {
+                user.Status = status;
+                await _userManager.UpdateAsync(user);
+                return Ok();
+            }
+
+            return BadRequest("Invalid status");
+        }
+
+
+
+
 
         private string GenerateStudentCode()
         {
-            var year = DateTime.Now.Year.ToString().Substring(2); 
-            var sequence = _context.Students.Count() + 1; 
-            return $"ST{year}{sequence:D4}"; 
+            var year = DateTime.Now.Year.ToString().Substring(2);
+            var sequence = _context.Students.Count() + 1;
+            return $"ST{year}{sequence:D4}";
         }
-
 
         private string GenerateEmployeeCode()
         {
@@ -148,5 +232,4 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             return $"TC{year}{sequence:D4}";
         }
     }
-
 }

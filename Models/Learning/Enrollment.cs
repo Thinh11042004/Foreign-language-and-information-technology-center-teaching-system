@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Courses;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Courses;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Finance;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Users;
@@ -12,7 +12,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
         public int CourseId { get; set; }
         public int? ClassId { get; set; }
         public DateTime EnrollmentDate { get; set; }
-        public EnrollmentStatus Status { get; set; } = EnrollmentStatus.Active;
+        public EnrollmentStatus Status { get; set; } = EnrollmentStatus.Studying;
         public decimal PaidAmount { get; set; }
         public decimal TotalFee { get; set; }
         public string PaymentPlan { get; set; } 

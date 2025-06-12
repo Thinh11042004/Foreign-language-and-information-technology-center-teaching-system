@@ -2,9 +2,11 @@ using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Hubs;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Facilities;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Setting;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Reponsitory.Background;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Reponsitory.Email;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Reponsitory.Notificationtype;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Reponsitory.Report;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Reponsitory.Traffic;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,15 +14,30 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ============================
-// 1. CONFIGURE DATABASE
-// ============================
+// ======================================
+// 1. ĐỌC CẤU HÌNH TỪ ENV / appsettings
+// ======================================
+builder.Configuration.AddEnvironmentVariables();
+
+// ======================================
+// 2. KẾT NỐI DATABASE
+// ======================================
+
+//var dbConnection = builder.Configuration.GetConnectionString("DatabaseConnection")
+//                 ?? Environment.GetEnvironmentVariable("DB_CONNECTION");
+
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//    options.UseSqlServer(dbConnection, sqlOptions =>
+//        sqlOptions.EnableRetryOnFailure()));
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConnection")));
 
-// ============================
-// 2. CONFIGURE IDENTITY
-// ============================
+
+
+// ======================================
+// 3. CẤU HÌNH IDENTITY
+// ======================================
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
     options.Password.RequireDigit = true;
@@ -34,32 +51,19 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 .AddDefaultTokenProviders()
 .AddDefaultUI();
 
-
-// ============================
-// 3. CONFIGURE COOKIES
-// ============================
+// ======================================
+// 4. CẤU HÌNH COOKIE & SESSION
+// ======================================
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Account/Login";
-    options.LogoutPath = "/Account/Logout";
     options.AccessDeniedPath = "/Account/AccessDenied";
-    options.ExpireTimeSpan = TimeSpan.FromHours(12);
+    options.ExpireTimeSpan = TimeSpan.FromHours(1);
     options.SlidingExpiration = true;
     options.Cookie.HttpOnly = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
     options.Cookie.SameSite = SameSiteMode.Strict;
 });
-
-// ============================
-// 4. ADD SERVICES
-// ============================
-builder.Services.AddSignalR();
-builder.Services.AddControllersWithViews(options =>
-{
-    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
-});
-
-builder.Services.AddRazorPages();
 
 builder.Services.AddSession(options =>
 {
@@ -68,21 +72,37 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Custom Services
+// ======================================
+// 5. CẤU HÌNH MVC, SIGNALR, RAZOR
+// ======================================
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+});
+builder.Services.AddSignalR();
+builder.Services.AddRazorPages();
+
+// ======================================
+// 6. ĐĂNG KÝ CÁC DỊCH VỤ RIÊNG
+// ======================================
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddHostedService<PaymentReminderService>();
 builder.Services.AddHostedService<AttendanceReminderService>();
 builder.Services.AddScoped<ITrafficService, TrafficService>();
+builder.Services.AddScoped<IReportService, ReportService>();
 
+// Cấu hình Email từ appsettings.json hoặc ENV
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
-// ============================
-// 5. BUILD APP
-// ============================
+// ======================================
+// 7. BUILD APP
+// ======================================
 var app = builder.Build();
 
-
-
+// ======================================
+// 8. SEED DỮ LIỆU BAN ĐẦU
+// ======================================
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -91,9 +111,10 @@ using (var scope = app.Services.CreateScope())
     var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
     await SeedDataAsync(context, userManager, roleManager);
 }
-// ============================
-// 6. CONFIGURE MIDDLEWARE
-// ============================
+
+// ======================================
+// 9. CẤU HÌNH MIDDLEWARE
+// ======================================
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -108,18 +129,16 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
-
 app.MapHub<NotificationHub>("/notificationHub");
 
 app.MapControllerRoute(
     name: "areas",
-     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
@@ -127,54 +146,48 @@ app.MapControllerRoute(
 
 app.Run();
 
-
-// =========================
-//  SEED METHOD
-// =========================
+// ======================================
+// 10. SEED ROLE, USER, PHÒNG HỌC
+// ======================================
 async Task SeedDataAsync(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
 {
-    // Seed roles if they don't exist
-    if (!await roleManager.RoleExistsAsync("SuperAdmin"))
+    string[] roles = new[] { "SuperAdmin", "Admin", "Teacher", "Student" };
+    foreach (var role in roles)
     {
-        await roleManager.CreateAsync(new ApplicationRole { Name = "SuperAdmin", NormalizedName = "SUPERADMIN" });
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new ApplicationRole { Name = role, NormalizedName = role.ToUpper() });
+        }
     }
 
-    if (!await roleManager.RoleExistsAsync("Admin"))
-    {
-        await roleManager.CreateAsync(new ApplicationRole { Name = "Admin", NormalizedName = "ADMIN" });
-    }
-
-    if (!await roleManager.RoleExistsAsync("Teacher"))
-    {
-        await roleManager.CreateAsync(new ApplicationRole { Name = "Teacher", NormalizedName = "TEACHER" });
-    }
-
-    if (!await roleManager.RoleExistsAsync("Student"))
-    {
-        await roleManager.CreateAsync(new ApplicationRole { Name = "Student", NormalizedName = "STUDENT" });
-    }
-
-    // Seed user if not already present
     if (!await userManager.Users.AnyAsync())
     {
-        var adminUser = new ApplicationUser
+        var admin = new ApplicationUser
         {
             UserName = "ntt112004h@gmail.com",
             Email = "ntt112004h@gmail.com",
             FullName = "System Administrator",
             CreatedAt = DateTime.UtcNow,
-            IsActive = true,
             EmailConfirmed = true
         };
 
-        var userResult = await userManager.CreateAsync(adminUser, "Thinh123!");
-
-        if (userResult.Succeeded)
+        var result = await userManager.CreateAsync(admin, "Thinh123!");
+        if (result.Succeeded)
         {
-            await userManager.AddToRoleAsync(adminUser, "SuperAdmin");
+            await userManager.AddToRoleAsync(admin, "SuperAdmin");
         }
     }
 
-    await context.SaveChangesAsync();  
-}
+    //if (!await context.Rooms.AnyAsync())
+    //{
+    //    var rooms = new List<Room>
+    //    {
+    //        new Room { Name = "Room 101", Code = "R101", Capacity = 20, Type = RoomType.Classroom, IsActive = true },
+    //        new Room { Name = "Computer Lab 1", Code = "CL01", Capacity = 25, Type = RoomType.ComputerLab, IsActive = true },
+    //        new Room { Name = "Audio Lab", Code = "AL01", Capacity = 15, Type = RoomType.AudioLab, IsActive = true }
+    //    };
 
+    //    context.Rooms.AddRange(rooms);
+    //    await context.SaveChangesAsync();
+    //}
+}

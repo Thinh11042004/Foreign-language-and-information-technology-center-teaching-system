@@ -1,4 +1,6 @@
-﻿    using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Communication;
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+    using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Communication;
     using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Courses;
     using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Facilities;
     using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Feedback;
@@ -13,9 +15,13 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
     using System.Reflection.Emit;
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
-    {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+public class ApplicationDbContext
+ : IdentityDbContext<ApplicationUser, ApplicationRole, string,
+                     IdentityUserClaim<string>, UserRole, IdentityUserLogin<string>,
+                     IdentityRoleClaim<string>, IdentityUserToken<string>>
+
+{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         // Identity
         //public DbSet<UserRole> UserRoles { get; set; }
@@ -27,6 +33,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
         public DbSet<CourseModule> CourseModules { get; set; }
         public DbSet<Classroom> Classes { get; set; }
         public DbSet<ClassTeacher> ClassTeachers { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
 
 
     // Learning Management
@@ -95,6 +102,12 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
         builder.Entity<Salary>()
                .Property(s => s.BaseSalary)
                .HasPrecision(18, 2);
+        builder.Entity<Classroom>()
+                .Property(c => c.ClassFee)
+                .HasPrecision(18, 2);
+        builder.Entity<Salary>()
+                .Property(s => s.Bonus)
+                .HasPrecision(18, 2);
 
         // Cấu hình các chỉ mục
         builder.Entity<Students>()

@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Teacher;
 using Microsoft.AspNetCore.Authorization;
@@ -64,7 +64,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             return await _context.ClassTeachers
                 .Where(ct => ct.TeacherId == teacherId)
                 .SelectMany(ct => ct.Class.Enrollments)
-                .Where(e => e.Status == EnrollmentStatus.Active)
+                .Where(e => e.Status == EnrollmentStatus.Studying)
                 .Select(e => e.StudentId)
                 .Distinct()
                 .CountAsync();

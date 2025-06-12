@@ -1,4 +1,5 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Users;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Users;
 using Microsoft.AspNetCore.Identity;
 using NuGet.DependencyResolver;
 using System.ComponentModel.DataAnnotations;
@@ -28,9 +29,10 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
         [DataType(DataType.DateTime)]
         public DateTime? LastLoginAt { get; set; }
 
-        public bool IsActive { get; set; } = true;
 
         // ---------- Navigation Properties ----------
+
+        public UserStatus Status { get; set; } = UserStatus.Active;
 
         // Một người dùng có thể là giáo viên
         public virtual Teachers Teacher { get; set; }

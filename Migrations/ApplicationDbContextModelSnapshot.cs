@@ -103,6 +103,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<decimal>("ClassFee")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Code")
@@ -492,6 +493,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("Bonus")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("Deductions")
@@ -579,7 +581,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "1",
-                            CreatedAt = new DateTime(2025, 6, 11, 11, 28, 0, 301, DateTimeKind.Utc).AddTicks(3120),
+                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5282),
                             Description = "Super Administrator",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
@@ -587,7 +589,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "2",
-                            CreatedAt = new DateTime(2025, 6, 11, 11, 28, 0, 301, DateTimeKind.Utc).AddTicks(3123),
+                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5292),
                             Description = "Administrator",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
@@ -595,7 +597,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "3",
-                            CreatedAt = new DateTime(2025, 6, 11, 11, 28, 0, 301, DateTimeKind.Utc).AddTicks(3125),
+                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5294),
                             Description = "Teacher",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
@@ -603,7 +605,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "4",
-                            CreatedAt = new DateTime(2025, 6, 11, 11, 28, 0, 301, DateTimeKind.Utc).AddTicks(3128),
+                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5296),
                             Description = "Student",
                             Name = "Student",
                             NormalizedName = "STUDENT"
@@ -646,9 +648,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
                     b.Property<DateTime?>("LastLoginAt")
                         .HasColumnType("datetime2");
 
@@ -678,6 +677,9 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
@@ -696,6 +698,21 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.UserRole", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Learning.Assignment", b =>
@@ -1423,28 +1440,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                     b.ToTable("AspNetUserLogins", (string)null);
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(34)
-                        .HasColumnType("nvarchar(34)");
-
-                    b.HasKey("UserId", "RoleId");
-
-                    b.ToTable("AspNetUserRoles", (string)null);
-
-                    b.HasDiscriminator().HasValue("IdentityUserRole<string>");
-
-                    b.UseTphMappingStrategy();
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
@@ -1462,15 +1457,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.UserRole", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUserRole<string>");
-
-                    b.HasIndex("RoleId");
-
-                    b.HasDiscriminator().HasValue("UserRole");
                 });
 
             modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Communication.Notification", b =>
@@ -1608,6 +1594,25 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         .IsRequired();
 
                     b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.UserRole", b =>
+                {
+                    b.HasOne("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.ApplicationRole", "Role")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.ApplicationUser", "User")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Learning.Assignment", b =>
@@ -1829,25 +1834,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.UserRole", b =>
-                {
-                    b.HasOne("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.ApplicationRole", "Role")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity.ApplicationUser", "User")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Role");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Courses.Classroom", b =>

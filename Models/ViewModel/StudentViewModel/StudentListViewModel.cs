@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Users;
 
 namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Student
@@ -9,13 +9,13 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
         public string SearchTerm { get; set; }
-        public StudentStatus? SelectedStatus { get; set; }
-        public Dictionary<StudentStatus, string> StatusLabels =>
+        public UserStatus? SelectedStatus { get; set; }
+        public Dictionary<UserStatus, string> StatusLabels =>
             new()
             {
-                { StudentStatus.Active, "Đang học" },
-                { StudentStatus.Graduated, "Đã tốt nghiệp" },
-                { StudentStatus.Inactive, "Tạm dừng" }
+                { UserStatus.Active, "Đang học" },
+                { UserStatus.Graduated, "Đã tốt nghiệp" },
+                { UserStatus.Inactive, "Tạm dừng" }
             };
     }
 }

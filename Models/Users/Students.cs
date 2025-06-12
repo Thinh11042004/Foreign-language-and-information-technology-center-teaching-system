@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Finance;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Learning;
@@ -15,7 +15,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
         public string EmergencyContact { get; set; }
         public string LearningGoals { get; set; }
         public string PreviousExperience { get; set; }
-        public StudentStatus Status { get; set; } = StudentStatus.Active;
+        public UserStatus Status { get; set; } = UserStatus.Active;
         public DateTime EnrollmentDate { get; set; }
 
         // Navigation properties

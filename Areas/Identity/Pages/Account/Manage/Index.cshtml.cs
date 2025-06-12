@@ -30,10 +30,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Areas.
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-
-        public string FullName { get; set; }
-
-
         public string Username { get; set; }
 
         /// <summary>
@@ -60,27 +56,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Areas.
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-
-
-
-            [Required(ErrorMessage = "Họ tên không được để trống.")]
-            [Display(Name = "Full Name")]
-            public string FullName { get; set; }
-
-            [Address]
-            [Display(Name = "Address")]
-            public string Address { get; set; }
-
-            [Age]
-            [Display(Name = "Age")]
-            public string Age { get; set; }
-
-
-            [SchoolName]
-            [Display(Name = "School Name")]
-            public string SchoolName { get; set; }
-
-
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
@@ -95,10 +70,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Areas.
 
             Input = new InputModel
             {
-                FullName = user.FullName,
-                PhoneNumber = phoneNumber,
-                Address = user.Address,
-                
+                PhoneNumber = phoneNumber
             };
         }
 
@@ -127,13 +99,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Areas.
                 await LoadAsync(user);
                 return Page();
             }
-            var hasChanges = false;
-
-            if (Input.FullName != user.FullName)
-            {
-                user.FullName = Input.FullName;
-                hasChanges = true;
-            }
 
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
             if (Input.PhoneNumber != phoneNumber)
@@ -145,9 +110,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Areas.
                     return RedirectToPage();
                 }
             }
-            user.Address = Input.Address;
-           
-            await _userManager.UpdateAsync(user);
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

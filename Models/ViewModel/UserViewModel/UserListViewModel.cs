@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 
 namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.User
 {
@@ -9,6 +9,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
         public int TotalPages { get; set; }
         public string SearchTerm { get; set; }
         public string SelectedRole { get; set; }
+        public string SearchString { get; set; }
         public List<ApplicationRole> Roles { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Student;
 using Microsoft.AspNetCore.Authorization;
@@ -17,7 +17,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
         {
         }
 
-        public async Task<IActionResult> Index(int page = 1, string search = "", StudentStatus? status = null)
+        public async Task<IActionResult> Index(int page = 1, string search = "", UserStatus? status = null)
         {
             var query = _context.Students
                 .Include(s => s.User)
@@ -73,7 +73,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             var model = new StudentDetailsViewModel
             {
                 Student = student,
-                ActiveEnrollments = student.Enrollments.Where(e => e.Status == EnrollmentStatus.Active).ToList(),
+                ActiveEnrollments = student.Enrollments.Where(e => e.Status == EnrollmentStatus.Studying).ToList(),
                 TotalPaid = student.Payments.Where(p => p.Status == PaymentStatus.Paid).Sum(p => p.Amount),
                 OutstandingBalance = student.Payments.Where(p => p.Status == PaymentStatus.Pending).Sum(p => p.Amount),
                 AttendanceRate = await GetStudentAttendanceRateAsync(id)

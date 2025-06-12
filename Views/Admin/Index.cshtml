@@ -1,4 +1,4 @@
-﻿@using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums
+@using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums
 @using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Dashboard
 @model AdminDashboardViewModel
 @{
@@ -147,7 +147,7 @@
                                     <td>@enrollment.Course.Name</td>
                                     <td>@enrollment.EnrollmentDate.ToString("MM/dd/yyyy")</td>
                                     <td>
-                                        <span class="badge badge-@(enrollment.Status == EnrollmentStatus.Active ? "success" : "warning")">
+                                        <span class="badge badge-@(enrollment.Status == EnrollmentStatus.Studying ? "success" : "warning")">
                                             @enrollment.Status
                                         </span>
                                     </td>

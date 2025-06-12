@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Reponsitory.Notificationtype;
 using Microsoft.EntityFrameworkCore;
 
@@ -38,7 +38,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Repons
 
                         foreach (var classEntity in classesTomorrow)
                         {
-                            foreach (var enrollment in classEntity.Enrollments.Where(e => e.Status == EnrollmentStatus.Active))
+                            foreach (var enrollment in classEntity.Enrollments.Where(e => e.Status == EnrollmentStatus.Studying))
                             {
                                 await notificationService.SendNotificationAsync(
                                     enrollment.Student.UserId,
