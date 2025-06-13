@@ -23,7 +23,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             return await _userManager.GetUserAsync(User);
         }
 
-        protected async Task LogActivityAsync(string action, string entityType, string entityId = null)
+        protected async Task LogActivityAsync(string action, string entityType, string entityId = null, string oldValues = null, string newValues = null)
         {
             var user = await GetCurrentUserAsync();
             var auditLog = new AuditLog
@@ -31,10 +31,12 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
                 UserId = user?.Id,
                 Action = action,
                 EntityType = entityType,
-                EntityId = entityId,
+                EntityId = entityId ?? string.Empty,
                 Timestamp = DateTime.UtcNow,
-                IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString(),
-                UserAgent = HttpContext.Request.Headers["User-Agent"].ToString()
+                IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? string.Empty,
+                UserAgent = HttpContext.Request.Headers["User-Agent"].ToString(),
+                OldValues = oldValues ?? string.Empty,
+                NewValues = newValues ?? string.Empty
             };
 
             _context.AuditLogs.Add(auditLog);

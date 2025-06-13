@@ -17,129 +17,169 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học
 build_property.RootNamespace = Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học
-build_property.ProjectDir = D:\Foreign-language-and-information-technology-center-teaching-system\
+build_property.ProjectDir = D:\Visual studio 22\Foreign-language-and-information-technology-center-teaching-system\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Foreign-language-and-information-technology-center-teaching-system
+build_property.MSBuildProjectDirectory = D:\Visual studio 22\Foreign-language-and-information-technology-center-teaching-system
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Admin/Index.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Home/Index.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/ClassManagement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NNYW5hZ2VtZW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/ClassManagement/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/ClassManagement/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NNYW5hZ2VtZW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/ClassManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NNYW5hZ2VtZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/ClassManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/CourseManagement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlTWFuYWdlbWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/CourseManagement/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlTWFuYWdlbWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/CourseManagement/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlTWFuYWdlbWVudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/CourseManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlTWFuYWdlbWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/CourseManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlTWFuYWdlbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/Error.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_AttendanceModal.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_AttendanceModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdHRlbmRhbmNlTW9kYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_AuthLayout.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_GradeAssignmentModal.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_GradeAssignmentModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HcmFkZUFzc2lnbm1lbnRNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_LoginPartial.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_Navbar.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Student/Dashboard.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Student/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/UserManagement/Index.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/UserManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/_ViewImports.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/_ViewStart.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_Layout.cshtml]
+[D:/Visual studio 22/Foreign-language-and-information-technology-center-teaching-system/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9rs0lk5v40

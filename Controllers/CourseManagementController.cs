@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Controllers
 {
@@ -87,7 +88,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
                 _context.Courses.Add(course);
                 await _context.SaveChangesAsync();
                 await LogActivityAsync("CreateCourse", "Course", course.id.ToString());
-
+                TempData["SuccessMessage"] = "Khóa học đã được tạo thành công!";
                 return RedirectToAction(nameof(Index));
             }
 
@@ -135,6 +136,142 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
                 .ToListAsync();
 
             return ratings.Any() ? ratings.Average() : 0;
+        }
+
+        // Edit Course
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var course = await _context.Courses.FindAsync(id);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            var model = new CreateCourseViewModel
+            {
+                Name = course.Name,
+                Code = course.Code,
+                Description = course.Description,
+                Type = course.Type,
+                Category = course.Category,
+                Level = course.Level,
+                Fee = course.Fee,
+                DurationHours = course.DurationHours,
+                MaxStudents = course.MaxStudents,
+                Prerequisites = course.Prerequisites,
+                LearningOutcomes = course.LearningOutcomes,
+                Materials = course.Materials
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, CreateCourseViewModel model)
+        {
+            if (id != model.id) // Assuming CreateCourseViewModel also has an 'id' property for editing. If not, this check needs adjustment.
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var courseToUpdate = await _context.Courses.FindAsync(id);
+                    if (courseToUpdate == null)
+                    {
+                        return NotFound();
+                    }
+
+                    courseToUpdate.Name = model.Name;
+                    courseToUpdate.Code = model.Code;
+                    courseToUpdate.Description = model.Description;
+                    courseToUpdate.Type = model.Type;
+                    courseToUpdate.Category = model.Category;
+                    courseToUpdate.Level = model.Level;
+                    courseToUpdate.Fee = model.Fee;
+                    courseToUpdate.DurationHours = model.DurationHours;
+                    courseToUpdate.MaxStudents = model.MaxStudents;
+                    courseToUpdate.Prerequisites = model.Prerequisites;
+                    courseToUpdate.LearningOutcomes = model.LearningOutcomes;
+                    courseToUpdate.Materials = model.Materials;
+                    courseToUpdate.IsActive = true; // Assuming this should remain true or be handled elsewhere
+                    // Keep CreatedAt and CreatedBy as they are original
+                    // courseToUpdate.UpdatedAt = DateTime.UtcNow; // Add an UpdateAt property in your model if needed
+
+                    _context.Update(courseToUpdate);
+                    await _context.SaveChangesAsync();
+                    await LogActivityAsync("UpdateCourse", "Course", courseToUpdate.id.ToString());
+                    TempData["SuccessMessage"] = "Khóa học đã được cập nhật thành công!";
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!CourseExists(model.id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
+        }
+
+        // Delete Course
+        [HttpGet]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var course = await _context.Courses
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            return View(course);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var course = await _context.Courses.FindAsync(id);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            // Capture the old values before deletion for audit log
+            var oldValues = JsonSerializer.Serialize(course);
+
+            _context.Courses.Remove(course);
+            await _context.SaveChangesAsync();
+
+            // Log the activity with old values and empty new values for deletion
+            await LogActivityAsync("DeleteCourse", "Course", course.id.ToString(), oldValues, "");
+            TempData["SuccessMessage"] = "Khóa học đã được xóa thành công!";
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool CourseExists(int id)
+        {
+            return _context.Courses.Any(e => e.id == id);
         }
     }
 }

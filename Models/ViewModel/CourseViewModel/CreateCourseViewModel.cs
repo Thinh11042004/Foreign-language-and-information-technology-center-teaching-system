@@ -1,10 +1,12 @@
 ﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 
-namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Course
+namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.CourseViewModel
 {
     public class CreateCourseViewModel
     {
+        public int id { get; set; }
+
         [Required]
         [StringLength(200)]
         public string Name { get; set; }

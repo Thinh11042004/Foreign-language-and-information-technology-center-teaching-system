@@ -581,7 +581,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "1",
-                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5282),
+                            CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6119),
                             Description = "Super Administrator",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
@@ -589,7 +589,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "2",
-                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5292),
+                            CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6125),
                             Description = "Administrator",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
@@ -597,7 +597,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "3",
-                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5294),
+                            CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6127),
                             Description = "Teacher",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
@@ -605,7 +605,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "4",
-                            CreatedAt = new DateTime(2025, 6, 12, 11, 6, 39, 432, DateTimeKind.Utc).AddTicks(5296),
+                            CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6129),
                             Description = "Student",
                             Name = "Student",
                             NormalizedName = "STUDENT"
@@ -1132,11 +1132,9 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NewValues")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OldValues")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Timestamp")

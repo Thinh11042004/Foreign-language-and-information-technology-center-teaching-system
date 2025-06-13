@@ -9,8 +9,8 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
         public string Action { get; set; }
         public string EntityType { get; set; }
         public string EntityId { get; set; }
-        public string OldValues { get; set; }
-        public string NewValues { get; set; }
+        public string? OldValues { get; set; }
+        public string? NewValues { get; set; }
         public DateTime Timestamp { get; set; }
         public string IpAddress { get; set; }
         public string UserAgent { get; set; }
