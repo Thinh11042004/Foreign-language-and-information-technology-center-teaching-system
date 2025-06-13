@@ -1,7 +1,8 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Controllers
 {
@@ -23,7 +24,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             return await _userManager.GetUserAsync(User);
         }
 
-        protected async Task LogActivityAsync(string action, string entityType, string entityId = null)
+        protected async Task LogActivityAsync(string action, string entityType, string entityId = null, object newData = null, object oldData = null)
         {
             var user = await GetCurrentUserAsync();
             var auditLog = new AuditLog
@@ -34,12 +35,17 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
                 EntityId = entityId,
                 Timestamp = DateTime.UtcNow,
                 IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString(),
-                UserAgent = HttpContext.Request.Headers["User-Agent"].ToString()
+                UserAgent = HttpContext.Request.Headers["User-Agent"].ToString(),
+
+                NewValues = newData != null ? JsonConvert.SerializeObject(newData) : "{}",
+                OldValues = oldData != null ? JsonConvert.SerializeObject(oldData) : "{}"
             };
 
             _context.AuditLogs.Add(auditLog);
             await _context.SaveChangesAsync();
         }
+
+
     }
 
 }

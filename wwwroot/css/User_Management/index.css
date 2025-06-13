@@ -100,6 +100,24 @@ select.form-select-sm {
     color: #000;
 }
 
+.role-badge {
+    display: inline-block;
+    min-width: 130px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.role-dropdown {
+    min-width: 130px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+
 /* ==== Dark mode fallback ==== */
 @media (prefers-color-scheme: dark) {
     body {
