@@ -8,13 +8,10 @@ wwwroot\css\Profile.css
 wwwroot\css\Register.css
 wwwroot\css\site.css
 wwwroot\css\Teacher\Index.css
+wwwroot\css\User_Management\Create.css
+wwwroot\css\User_Management\details.css
 wwwroot\css\User_Management\index.css
 wwwroot\favicon.ico
-wwwroot\js\Course_Management_index.js
-wwwroot\js\DashBoard.js
-wwwroot\js\site.js
-wwwroot\js\Student\dashboard.js
-wwwroot\js\User_Management\Index.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css

@@ -1,4 +1,4 @@
-﻿using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
+using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Identity;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Users;
 using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.Account;
@@ -30,12 +30,24 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Contro
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(model.Email);
+                var claims = await _userManager.GetClaimsAsync(user);
+                var mustChangePassword = claims.Any(c => c.Type == "MustChangePassword" && c.Value == "true");
+
+                if (mustChangePassword)
+                {
+             
+                    TempData["ForceChangePassword"] = user.Id;
+                    await _signInManager.SignOutAsync(); 
+                    return RedirectToAction("ForceChangePassword");
+                }
+
                 if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
                 {
                     var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
 
                     if (result.Succeeded)
                     {
+    
                         return RedirectToAction("Index", "Home");
                     }
                 }

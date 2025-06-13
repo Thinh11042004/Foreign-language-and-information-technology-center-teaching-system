@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\Foreign-language-and-information-technology-center-teaching-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\views\\usermanagement\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:views\\usermanagement\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\controllers\\usermanagermentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:controllers\\usermanagermentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\models\\users\\teachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:models\\users\\teachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\wwwroot\\js\\user_management\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:wwwroot\\js\\user_management\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\models\\enums\\userstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:models\\enums\\userstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\models\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:models\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\models\\viewmodel\\userviewmodel\\statusupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:models\\viewmodel\\userviewmodel\\statusupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|d:\\foreign-language-and-information-technology-center-teaching-system\\models\\users\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A397E5-7240-4693-B344-B19B95E32433}|Foreign-language-and-information-technologya-center-teaching-system.csproj|solutionrelative:models\\users\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +38,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAM4AAAAAAAAAAAAAAN4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T11:28:05.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StatusUpdateRequest.cs",
-              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\ViewModel\\UserViewModel\\StatusUpdateRequest.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModel\\UserViewModel\\StatusUpdateRequest.cs",
-              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\ViewModel\\UserViewModel\\StatusUpdateRequest.cs",
-              "RelativeToolTip": "Models\\ViewModel\\UserViewModel\\StatusUpdateRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T11:15:00.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAkwKsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T11:05:18.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserManagermentController.cs",
-              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Controllers\\UserManagermentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserManagermentController.cs",
-              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Controllers\\UserManagermentController.cs",
-              "RelativeToolTip": "Controllers\\UserManagermentController.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAADwv80AAAAAAAAAAAAAAA==",
+              "Title": "Teachers.cs",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Users\\Teachers.cs",
+              "RelativeDocumentMoniker": "Models\\Users\\Teachers.cs",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Users\\Teachers.cs",
+              "RelativeToolTip": "Models\\Users\\Teachers.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T11:04:38.724Z",
+              "WhenOpened": "2025-06-13T07:24:00.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.js",
-              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\wwwroot\\js\\User_Management\\Index.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\User_Management\\Index.js",
-              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\wwwroot\\js\\User_Management\\Index.js",
-              "RelativeToolTip": "wwwroot\\js\\User_Management\\Index.js",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAIwJQAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-12T11:04:14.65Z",
+              "DocumentIndex": 4,
+              "Title": "Students.cs",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Users\\Students.cs",
+              "RelativeDocumentMoniker": "Models\\Users\\Students.cs",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Users\\Students.cs",
+              "RelativeToolTip": "Models\\Users\\Students.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA8wA4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:22:49.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserStatus.cs",
-              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Enums\\UserStatus.cs",
-              "RelativeDocumentMoniker": "Models\\Enums\\UserStatus.cs",
-              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Enums\\UserStatus.cs",
-              "RelativeToolTip": "Models\\Enums\\UserStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Identity\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\Identity\\ApplicationUser.cs",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Models\\Identity\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\Identity\\ApplicationUser.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T10:51:39.588Z",
+              "WhenOpened": "2025-06-13T07:19:41.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManagementController.cs",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Controllers\\UserManagementController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserManagementController.cs",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Controllers\\UserManagementController.cs",
+              "RelativeToolTip": "Controllers\\UserManagementController.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAQwLYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:09:50.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Views\\UserManagement\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\UserManagement\\Index.cshtml",
-              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Views\\UserManagement\\Index.cshtml",
-              "RelativeToolTip": "Views\\UserManagement\\Index.cshtml",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAIwKYAAAApAAAAAAAAAA==",
+              "Title": "CreateUser.cshtml",
+              "DocumentMoniker": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Views\\UserManagement\\CreateUser.cshtml",
+              "RelativeDocumentMoniker": "Views\\UserManagement\\CreateUser.cshtml",
+              "ToolTip": "D:\\Foreign-language-and-information-technology-center-teaching-system\\Views\\UserManagement\\CreateUser.cshtml*",
+              "RelativeToolTip": "Views\\UserManagement\\CreateUser.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T10:44:49.821Z",
+              "WhenOpened": "2025-06-13T05:50:42.241Z",
               "EditorCaption": ""
             }
           ]
