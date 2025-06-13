@@ -29,6 +29,7 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
         [DataType(DataType.DateTime)]
         public DateTime? LastLoginAt { get; set; }
 
+        public bool MustChangePassword { get; set; } = true;
 
         // ---------- Navigation Properties ----------
 
@@ -42,5 +43,6 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models
 
         // và có nhiều vai trò (many-to-many qua UserRole)
         public virtual ICollection<UserRole> UserRoles { get; set; }
+
     }
 }

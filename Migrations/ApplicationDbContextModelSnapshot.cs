@@ -581,7 +581,11 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "1",
+<<<<<<< HEAD
                             CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6119),
+=======
+                            CreatedAt = new DateTime(2025, 6, 13, 5, 28, 15, 761, DateTimeKind.Utc).AddTicks(4206),
+>>>>>>> c6beacc47ef9deee19b89d4bf7da190a4be3fb75
                             Description = "Super Administrator",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
@@ -589,7 +593,11 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "2",
+<<<<<<< HEAD
                             CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6125),
+=======
+                            CreatedAt = new DateTime(2025, 6, 13, 5, 28, 15, 761, DateTimeKind.Utc).AddTicks(4210),
+>>>>>>> c6beacc47ef9deee19b89d4bf7da190a4be3fb75
                             Description = "Administrator",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
@@ -597,7 +605,11 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "3",
+<<<<<<< HEAD
                             CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6127),
+=======
+                            CreatedAt = new DateTime(2025, 6, 13, 5, 28, 15, 761, DateTimeKind.Utc).AddTicks(4212),
+>>>>>>> c6beacc47ef9deee19b89d4bf7da190a4be3fb75
                             Description = "Teacher",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
@@ -605,7 +617,11 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
                         new
                         {
                             Id = "4",
+<<<<<<< HEAD
                             CreatedAt = new DateTime(2025, 6, 13, 6, 14, 50, 155, DateTimeKind.Utc).AddTicks(6129),
+=======
+                            CreatedAt = new DateTime(2025, 6, 13, 5, 28, 15, 761, DateTimeKind.Utc).AddTicks(4224),
+>>>>>>> c6beacc47ef9deee19b89d4bf7da190a4be3fb75
                             Description = "Student",
                             Name = "Student",
                             NormalizedName = "STUDENT"
@@ -656,6 +672,9 @@ namespace Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Migrat
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<bool>("MustChangePassword")
+                        .HasColumnType("bit");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)

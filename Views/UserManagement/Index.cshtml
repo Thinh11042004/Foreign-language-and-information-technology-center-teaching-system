@@ -1,9 +1,9 @@
 @using Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.Enums
 @model Hệ_thống_dạy_học_trung_tâm_ngoại_ngữ_và_tin_học.Models.ViewModel.User.UserListViewModel;
+
 @{
     ViewData["Title"] = "Quản lý người dùng";
 }
-
 
 <link rel="stylesheet" href="~/css/User_Management/index.css" />
 
@@ -13,7 +13,7 @@
             <h2 class="fw-bold text-primary"><i class="fas fa-users me-2"></i>Quản lý người dùng</h2>
             <p class="text-muted">Quản lý thông tin người dùng trong hệ thống</p>
         </div>
-        <a asp-action="Create" class="btn btn-success btn-lg animate__pulse">
+        <a asp-action="CreateUser" class="btn btn-success btn-lg animate__pulse">
             <i class="fas fa-plus"></i> Thêm người dùng
         </a>
     </div>
@@ -38,7 +38,6 @@
                 <option value="true">Tốt nghiệp</option>
                 <option value="true">Đình chỉ</option>
                 <option value="true">Điều chuyển</option>
-                
             </select>
         </div>
         <div class="col-md-2 d-grid">
@@ -118,33 +117,101 @@
                             <td><strong>@user.FullName</strong></td>
                             <td>@user.Email</td>
                             <td>@(string.IsNullOrWhiteSpace(user.PhoneNumber) ? "Chưa có" : user.PhoneNumber)</td>
-                            <td>
+                            @* <td class="text-center">
                                 @if (user.UserRoles == null || !user.UserRoles.Any())
                                 {
-                                    <form asp-action="AssignRole" method="post" class="d-inline-flex">
-                                        <input type="hidden" name="userId" value="@user.Id" />
-                                        <select name="role" class="form-select form-select-sm" onchange="this.form.submit()">
-                                            <option disabled selected>Chọn vai trò</option>
-                                            @foreach (var role in Model.Roles.Where(r => r.Name != "SuperAdmin"))
+                                    <select class="form-select form-select-sm auto-assign-role role-dropdown text-center mx-auto"
+                                            data-user-id="@user.Id"
+                                            style="width: 130px;">
+                                        <option disabled selected>Chọn vai trò</option>
+                                        @foreach (var role in Model.Roles)
+                                        {
+                                            if (role.Name != "SuperAdmin")
                                             {
                                                 <option value="@role.Name">@role.Name</option>
                                             }
-                                        </select>
-                                    </form>
+                                        }
+                                    </select>
                                 }
                                 else
                                 {
-                                    var roleName = user.UserRoles.FirstOrDefault()?.Role?.Name;
-                                    var roleClass = roleName switch
+                                    @foreach (var role in user.UserRoles)
                                     {
-                                        "SuperAdmin" => "bg-success",
-                                        "Admin" => "bg-primary",
-                                        "Teacher" => "bg-danger",
-                                        "Student" => "bg-purple",
-                                        _ => "bg-secondary"
-                                    };
+                                        var name = role.Role?.Name;
+                                        var badgeClass = name switch
+                                        {
+                                            "Admin" => "bg-primary",
+                                            "Teacher" => "bg-danger",
+                                            "Student" => "bg-purple",
+                                            "SuperAdmin" => "bg-success",
+                                            _ => "bg-secondary"
+                                        };
 
-                                    <span class="badge @roleClass text-white">@roleName</span>
+                                        var displayName = name switch
+                                        {
+                                            "SuperAdmin" => "Tổ trưởng",
+                                            "Admin" => "Quản trị viên",
+                                            "Teacher" => "Giáo viên",
+                                            "Student" => "Học sinh",
+                                            _ => name
+                                        };
+                                        <span class="badge @badgeClass role-badge">@displayName</span>
+                                    }
+                                }
+                            </td> *@
+
+                            <td class="text-center">
+                                @if (user.UserRoles == null || !user.UserRoles.Any())
+                                {
+                                    <select class="form-select form-select-sm auto-assign-role role-dropdown text-center mx-auto"
+                                            data-user-id="@user.Id"
+                                            style="width: 130px;">
+                                        <option disabled selected>Chọn vai trò</option>
+                                        @foreach (var role in Model.Roles)
+                                        {
+
+                                            if (role.Name != "SuperAdmin")
+                                            {
+                                                <option value="@role.Name">
+                                                    @{
+                                                        string roleLabel = role.Name switch
+                                                        {
+                                                            "Admin" => "Quản trị viên",
+                                                            "Teacher" => "Giáo viên",
+                                                            "Student" => "Học sinh",
+                                                            _ => role.Name ?? "Không rõ"
+                                                        };
+                                                    }
+                                                    @roleLabel
+                                                </option>
+                                            }
+                                        }
+                                    </select>
+                                }
+                                else
+                                {
+                                    @foreach (var role in user.UserRoles)
+                                    {
+                                        var name = role.Role?.Name;
+                                        var badgeClass = name switch
+                                        {
+                                            "Admin" => "bg-primary",
+                                            "Teacher" => "bg-danger",
+                                            "Student" => "bg-purple",
+                                            "SuperAdmin" => "bg-success",
+                                            _ => "bg-secondary"
+                                        };
+
+                                        var displayName = name switch
+                                        {
+                                           
+                                            "Admin" => "Quản trị viên",
+                                            "Teacher" => "Giáo viên",
+                                            "Student" => "Học sinh",
+                                            _ => name
+                                        };
+                                        <span class="badge @badgeClass role-badge">@displayName</span>
+                                    }
                                 }
                             </td>
 
@@ -177,7 +244,6 @@
                                 </form>
                             </td>
 
-
                             <td class="text-end">
                                 <div class="btn-group">
                                     <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-sm btn-outline-warning"><i class="fas fa-edit"></i></a>
@@ -195,4 +261,52 @@
     </div>
 </div>
 
+@Html.AntiForgeryToken()
 
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".auto-assign-role").forEach(select => {
+                select.addEventListener("change", async function () {
+                    const userId = this.getAttribute("data-user-id");
+                    const role = this.value;
+
+                    try {
+                        const response = await fetch("/UserManagement/AssignRole", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "RequestVerificationToken": document.querySelector('input[name="__RequestVerificationToken"]').value
+                            },
+                            body: JSON.stringify({ userId, role })
+                        });
+
+                        if (response.ok) {
+                            // Ánh xạ vai trò thành màu sắc + nhãn tiếng Việt
+                            const badgeMap = {
+                                "SuperAdmin": { class: "bg-success", label: "Tổ trưởng" },
+                                "Admin": { class: "bg-primary", label: "Quản trị viên" },
+                                "Teacher": { class: "bg-danger", label: "Giáo viên" },
+                                "Student": { class: "bg-purple", label: "Học sinh" }
+                            };
+
+                            const badge = badgeMap[role] || { class: "bg-secondary", label: role };
+
+                            // Tạo HTML cho badge
+                            const badgeHtml = `<span class="badge ${badge.class} role-badge">${badge.label}</span>`;
+
+                            // Thay select dropdown bằng badge
+                            const cell = this.closest("td");
+                            cell.innerHTML = badgeHtml;
+                        } else {
+                            alert("Lỗi khi gán vai trò.");
+                        }
+                    } catch (err) {
+                        console.error(err);
+                        alert("Lỗi kết nối đến server.");
+                    }
+                });
+            });
+        });
+    </script>
+}
